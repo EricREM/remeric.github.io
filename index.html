@@ -1,59 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact REM Finance</title>
+    <title>REM Finance | Supporting you to reach every milestone</title>
     <style>
-        * { box-sizing: border-box; margin:0; padding:0; }
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            padding: 60px 20px; 
-            background: #f5f7fa;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container { max-width: 400px; margin: 0 auto; }
-        h2 {
-            font-size: 26px;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-        }
-        .slogan {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 40px;
-        }
-        .btn {
-            display: block;
-            width: 100%;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
-            margin: 14px 0;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 12px;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
+            text-align: center;
         }
-        .btn-email { background: #0077cc; }
-        .btn-sms { background: #25d366; }
-        .btn:hover { opacity: 0.9; }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .tagline {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .coming-soon-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .coming-soon-card h1 {
+            color: #111;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .coming-soon-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .contact-block {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-block h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-block a {
+            display: block;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 15px;
+            margin: 5px 0;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 140px;
+            }
+            .tagline {
+                font-size: 18px;
+            }
+            .coming-soon-card h1 {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h2>Contact REM Finance</h2>
-        <p class="slogan">Supporting you Reach Every Milestone</p>
 
-        <a href="mailto:eric.liu@remfinance.co.nz?subject=Business Inquiry&body=Hi Eric,%0D%0A%0D%0AI would like to get in touch with you">
-            <div class="btn btn-email">📩 Send Email</div>
-        </a>
-
-        <a href="sms:0275545535?body=Hi Eric,%0D%0A%0D%0AI would like to get in touch with you">
-            <div class="btn btn-sms">📱 Send SMS</div>
-        </a>
+    <div class="logo-container">
+        <img src="https://p5-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/f63a154034c248c5abbfd9b73ff830c8.png" alt="REM Finance Logo" class="logo">
     </div>
+
+    <p class="tagline">Supporting you to Reach Every Milestone</p>
+
+    <div class="coming-soon-card">
+        <h1>We're Building Something Great</h1>
+        <p>Our official website is currently under construction.</p>
+        <p>Please stay tuned for updates, coming soon!</p>
+
+        <!-- 紧急联系 Rohit Mulki 区域 -->
+        <div class="contact-block">
+            <h3>For business enquiries, please contact:</h3>
+            <p><strong>Rohit Mulki</strong></p>
+            <a href="tel:+64274526390">Phone: 027 452 6390</a>
+            <a href="mailto:rohit.mulki@remfinance.co.nz">Email: rohit.mulki@remfinance.co.nz</a>
+        </div>
+    </div>
+
+    <div class="contact-info">
+        REM Finance © 2026
+    </div>
+
 </body>
 </html>
