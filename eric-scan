@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact REM Finance</title>
+    <style>
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 60px 20px; 
+            background: #f5f7fa;
+        }
+        .container { max-width: 400px; margin: 0 auto; }
+        h2 {
+            font-size: 26px;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        .slogan {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin: 14px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-email { background: #0077cc; }
+        .btn-sms { background: #25d366; }
+        .btn:hover { opacity: 0.9; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Contact REM Finance</h2>
+        <p class="slogan">Supporting you Reach Every Milestone</p>
+
+        <a href="mailto:eric.liu@remfinance.co.nz?subject=Business Inquiry&body=Hi Eric,%0D%0A%0D%0AI would like to get in touch with you">
+            <div class="btn btn-email">📩 Send Email</div>
+        </a>
+
+        <a href="sms:0275545535?body=Hi Eric,%0D%0A%0D%0AI would like to get in touch with you">
+            <div class="btn btn-sms">📱 Send SMS</div>
+        </a>
+    </div>
+</body>
+</html>
