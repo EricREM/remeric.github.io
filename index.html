@@ -22,9 +22,10 @@
 <header class="main-header">
     <div class="second-nav js-nav">
         <div class="container">
-            <a class="s<a class="second-nav__logo" href="#home">
-  <img src="static/images/rem-logo.png" alt="REM Finance" class="logo-img">
-</a>
+            <a class="second-nav__logo" href="#home">
+                <img src="static/images/rem-logo.png" alt="REM Finance" class="logo-img">
+            </a>
+            <!-- 移动端会自动隐藏，无需删除 -->
             <nav class="menu">
                 <ul>
                     <li><a class="js-link js-anchor is-selected" href="#home">Home</a></li>
@@ -370,7 +371,7 @@
                         <p class="role title">Lorem ipsum dolor sit amet</p>
                         <p class="icon icon_location"><a class="adr js-anchor" href="#gmap"><span class="country-name">CountryName</span>,&nbsp;<span class="locality">CityName</span>,&nbsp;<span class="address">Address</span></a></p>
                         <p class="icon icon_mail"><a class="email" href="mailto:contact@example.com">contact@example.com</a></p>
-                        <p class="icon icon_phone"><a class="email" href="tel:1111111111">111-111-11-11</a></p>
+                        <p class="icon icon_phone"><a class="tel" href="tel:1111111111">111-111-11-11</a></p>
                     </div>
                     <ul class="contact-info__social">
                         <li><a class="icon icon_fb" rel="nofollow">I'm on Facebook</a></li>
@@ -398,23 +399,24 @@
 
 <script src="static/js/body.min.js"></script>
 <script>
+// 最终版：导航栏滚动样式 + 显示隐藏（完美适配桌面/移动端）
 let lastScrollTop = 0;
 const header = document.querySelector('.main-header');
-const scrollThreshold = 50; // 滚动超过50px触发样式变化
+const scrollThreshold = 200; // 滚动超过200px触发白底样式
 
 window.addEventListener('scroll', function() {
     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // 1. 控制样式切换（上滑/滚动超过阈值 → 白底黑字；顶部 → 透明白字）
+    // 1. 滚动样式切换（透明→白底，所有设备生效）
     if (currentScrollTop > scrollThreshold) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
 
-    // 2. 控制导航显示/隐藏（下滑隐藏，上滑显示）
+    // 2. 导航显示/隐藏逻辑（所有设备统一：下滑隐藏，上滑显示）
     if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
-        // 向下滚动 → 导航隐藏
+        // 向下滚动且超过100px → 导航隐藏
         header.style.transform = 'translateY(-100%)';
     } else {
         // 向上滚动 → 导航显示
@@ -425,21 +427,5 @@ window.addEventListener('scroll', function() {
 });
 </script>
 
-<script>
-// 监听滚动事件，控制导航栏样式
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.main-header');
-    // 核心调整：100px→200px（滚动200px后才开始转变，数值越大，触发越晚）
-    const scrollThreshold = 200; 
-    
-    if (window.scrollY > scrollThreshold) {
-        header.classList.add('scrolled'); // 添加白底样式
-    } else {
-        header.classList.remove('scrolled'); // 恢复透明样式
-    }
-});
-</script>
-
 </body>
 </html>
-
