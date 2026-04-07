@@ -1221,61 +1221,139 @@ a:hover {
     padding-bottom: 75% !important;
   }
 }
-/* ========== 手机 + iPad 全覆盖，电脑端不受影响 ========== */
-/* 1. 手机（≤768px）+ iPad（768px-1024px）通用修复 */
-@media (max-width: 1024px) {
+/* ========== 全局基础样式（所有设备通用） ========== */
+.home-section {
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    padding-top: 0 !important;
+}
+
+.home-section__bg {
+    position: absolute !important;
+    z-index: 0 !important;
+    background: url(../images/bg.png) center center no-repeat !important;
+    background-size: cover !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.home-section__overlay {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: rgba(17,17,17,0.3) !important;
+    z-index: 1 !important;
+}
+
+.home-section__header {
+    position: relative !important;
+    text-align: center !important;
+    z-index: 2 !important;
+}
+
+/* ========== 1. 小屏手机（≤375px：iPhone SE/12/13 mini等） ========== */
+@media (max-width: 375px) {
     .home-section__bg {
-        background-attachment: scroll !important; /* 禁用fixed，解决iPad兼容性 */
-        background-position: center center !important; /* 居中显示 */
-        background-size: cover !important; /* 强制覆盖全屏 */
-        width: 100vw !important; /* 基于视口宽度，避免留白 */
-        height: 100vh !important; /* 基于视口高度，撑满屏幕 */
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        background-image: url(../images/bg.png) !important; /* 和电脑端路径一致 */
+        background-attachment: scroll !important;
+        width: 100vw !important;
+        height: 100vh !important;
     }
-
-    /* 修复首页容器高度，确保背景图能显示 */
     .home-section {
-        height: auto !important;
-        min-height: 100vh !important; /* 撑满屏幕高度 */
-        margin-top: 0 !important; /* 取消负边距，避免背景上移 */
-        padding-top: 0 !important;
-        overflow: hidden !important;
-    }
-
-    /* 修复遮罩层，不遮挡背景图 */
-    .home-section__overlay {
-        position: absolute !important;
-        width: 100% !important;
-        height: 100% !important;
         min-height: 100vh !important;
-        top: 0 !important;
-        left: 0 !important;
-        background-attachment: scroll !important; /* 同步禁用fixed */
-        background-color: rgba(17,17,17,0.3) !important;
+        margin-top: 0 !important;
     }
-
-    /* 适配iPad/手机标题位置，不遮挡背景 */
     .home-section__header {
-        padding: 220px 10px !important; /* iPad 标题位置稍高，适配屏幕 */
-        position: relative !important;
-        z-index: 2 !important; /* 文字在遮罩层上方 */
+        padding: 160px 10px !important;
     }
 }
 
-/* 2. 电脑端（≥1025px）：完全保留原有正常样式，不改动 */
-@media (min-width: 1025px) {
+/* ========== 2. 常规手机（376px-767px：iPhone 14/15/安卓主流机型） ========== */
+@media (min-width: 376px) and (max-width: 767px) {
+    .home-section__bg {
+        background-attachment: scroll !important;
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+    .home-section {
+        min-height: 100vh !important;
+        margin-top: 0 !important;
+    }
+    .home-section__header {
+        padding: 180px 10px !important;
+    }
+}
+
+/* ========== 3. 平板（768px-1368px：iPad 9.7/10.2/11/13寸/安卓平板） ========== */
+@media (min-width: 768px) and (max-width: 1368px) {
+    .home-section__bg {
+        background-attachment: scroll !important; /* 禁用fixed解决iPad兼容性 */
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+    .home-section {
+        min-height: 100vh !important;
+        margin-top: 0 !important;
+    }
+    .home-section__header {
+        padding: 220px 10px !important; /* 适配平板大屏 */
+    }
+}
+
+/* ========== 4. 大屏平板/小笔记本（1369px-1680px：iPad Pro 13寸横屏/13寸笔记本） ========== */
+@media (min-width: 1369px) and (max-width: 1680px) {
+    .home-section__bg {
+        background-attachment: scroll !important; /* 避免小笔记本窗口缩小失效 */
+        min-width: 100% !important;
+        min-height: 100% !important;
+    }
+    .home-section {
+        min-height: 100vh !important;
+        margin-top: -50px !important; /* 轻微适配笔记本布局 */
+    }
+    .home-section__header {
+        padding: 300px 10px !important;
+    }
+}
+
+/* ========== 5. 常规笔记本/台式机（1681px-2560px：14/15/17寸笔记本/2K屏） ========== */
+@media (min-width: 1681px) and (max-width: 2560px) {
     .home-section__bg {
         background-attachment: fixed !important; /* 保留电脑端fixed效果 */
         min-width: 100% !important;
         min-height: 100% !important;
     }
     .home-section {
-        margin-top: -100px !important; /* 恢复电脑端原有负边距 */
+        min-height: 100vh !important;
+        margin-top: -100px !important; /* 恢复电脑端原有布局 */
     }
     .home-section__header {
-        padding: 400px 10px 400px !important; /* 恢复电脑端标题位置 */
+        padding: 400px 10px 400px !important;
+    }
+}
+
+/* ========== 6. 超大屏（≥2561px：4K屏/双屏） ========== */
+@media (min-width: 2561px) {
+    .home-section__bg {
+        background-attachment: fixed !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+    }
+    .home-section {
+        min-height: 100vh !important;
+        margin-top: -120px !important; /* 适配超大屏布局 */
+    }
+    .home-section__header {
+        padding: 450px 10px 450px !important;
+    }
+}
+
+/* ========== iOS设备兜底（所有iPhone/iPad通用，避免兼容性漏网） ========== */
+@supports (-webkit-touch-callout: none) {
+    .home-section__bg {
+        background-attachment: scroll !important;
+        height: 100vh !important;
     }
 }
