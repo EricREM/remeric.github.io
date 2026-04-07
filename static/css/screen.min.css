@@ -1221,10 +1221,11 @@ a:hover {
     padding-bottom: 75% !important;
   }
 }
-/* ========== 按宽度区分：≤768px 修复，>768px 保留原效果 ========== */
-@media (max-width: 768px) {
+/* ========== 仅手机/iPad 生效：修复背景图不显示，电脑端/缩小窗口完全不受影响 ========== */
+@media only screen and (max-width: 768px) and (hover: none) and (pointer: coarse) {
+    /* 仅针对触摸设备（手机/iPad），电脑端鼠标设备不会触发 */
     .home-section__bg {
-        background-attachment: scroll !important;
+        background-attachment: scroll !important; /* 仅移动端禁用fixed，解决不显示 */
         background-position: center center !important;
         background-size: cover !important;
         width: 100% !important;
@@ -1232,7 +1233,7 @@ a:hover {
         position: absolute !important;
         top: 0 !important;
         left: 0 !important;
-        background-image: url(../images/bg.png) !important;
+        background-image: url(../images/bg.png) !important; /* 和电脑端路径完全一致 */
     }
 
     .home-section {
