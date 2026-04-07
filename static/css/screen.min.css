@@ -1221,3 +1221,52 @@ a:hover {
     padding-bottom: 75% !important;
   }
 }
+/* ========== 仅 iOS 真机（iPhone/iPad 全尺寸）生效，电脑端/模拟器完全不受影响 ========== */
+@supports (-webkit-touch-callout: none) {
+    /* 1. 核心修复：禁用 fixed，解决 Safari 背景图不显示的根源问题 */
+    .home-section__bg {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        background-image: url(../images/bg.png) !important;
+        z-index: 0 !important;
+        /* iOS 专属渲染优化，强制硬件加速 */
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
+    }
+
+    /* 2. 修复首页容器高度，适配 iOS 状态栏/导航栏 */
+    .home-section {
+        height: auto !important;
+        min-height: 100vh !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+
+    /* 3. 修复遮罩层，同步禁用 fixed，避免层级冲突 */
+    .home-section__overlay {
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100vh !important;
+        top: 0 !important;
+        left: 0 !important;
+        background-attachment: scroll !important;
+        background-color: rgba(17,17,17,0.3) !important;
+        z-index: 1 !important;
+    }
+
+    /* 4. 适配 iOS 标题位置，不遮挡背景图 */
+    .home-section__header {
+        padding: 200px 10px !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+}
