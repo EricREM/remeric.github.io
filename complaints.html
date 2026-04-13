@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Complaints Process | REM Finance</title>
+    <meta name="description" content="Complaints Process - REM Finance">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="static/images/favicons/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="static/images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="static/images/favicons/apple-touch-icon-precomposed.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="static/css/screen.min.css">
+    <link rel="stylesheet" href="static/css/custom.min.css">
+    <script src="static/js/head.min.js"></script>
+
+    <style>
+        /* ========== 强制覆盖：LOGO红色 + 导航黑色 ========== */
+        /* 1. LOGO 取消反白，强制显示红色原图 */
+        .second-nav__logo .logo-img {
+            filter: none !important;
+            -webkit-filter: none !important;
+        }
+
+        /* 2. 导航文字强制黑色（无论是否滚动） */
+        .second-nav .menu ul li a,
+        .main-header.scrolled .menu ul li a {
+            color: #000000 !important;
+            font-weight: 600 !important;
+        }
+
+        /* 3. 导航下划线强制黑色 */
+        .second-nav .menu ul li a::after,
+        .main-header.scrolled .menu ul li a::after {
+            background-color: #000000 !important;
+        }
+
+        /* 4. 导航栏背景强制白色（投诉页面默认白底） */
+        .main-header {
+            background: #ffffff !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        }
+        .second-nav {
+            background-color: #ffffff !important;
+        }
+
+        /* ========== 投诉页面内容样式 ========== */
+        .complaints-page {
+            padding: 180px 20px 100px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .complaints-page h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            color: #111;
+        }
+        .complaints-page h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: #F03838;
+        }
+        .complaints-page p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航（保留） -->
+<header class="main-header">
+    <div class="second-nav js-nav">
+        <div class="container">
+            <a class="second-nav__logo" href="index.html#home">
+                <img src="static/images/rem-logo.png" alt="REM Finance" class="logo-img">
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a class="js-link js-anchor" href="index.html#home">Home</a></li>
+                    <li><a class="js-link js-anchor" href="index.html#about">About Us</a></li>
+                    <li><a class="js-link js-anchor" href="index.html#services">Services</a></li>
+                    <!-- <li><a class="js-link js-anchor" href="index.html#process">Process</a></li> -->
+                    <!-- <li><a class="js-link js-anchor" href="index.html#projects">Projects</a></li> -->
+                    <!-- <li><a class="js-link js-anchor" href="index.html#testimonials">Testimonials</a></li> -->
+                    <li><a class="js-link js-anchor" href="index.html#team">Our Team</a></li>
+                    <li><a class="js-link js-anchor" href="index.html#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- 投诉内容 -->
+<div class="complaints-page">
+    <h1>Complaints Process</h1>
+
+    <p>At REM Finance, we strive to deliver exceptional service to all our clients. If you are not satisfied with any aspect of our service, we encourage you to contact us so we can address your concerns promptly and fairly.</p>
+
+    <h2>1. How to Make a Complaint</h2>
+    <p>You can make a complaint using any of the following methods:</p>
+    <p>Email: Complaints@remfinance.co.nz</p>
+    <p>Phone: 027 452 6390</p>
+
+    <h2>2. Our Response</h2>
+    <p>We will acknowledge your complaint within 24 hours of receipt. We aim to resolve all complaints within 5 working days. If more time is required, we will keep you updated on our progress.</p>
+
+    <h2>3. Independent Dispute Resolution</h2>
+    <p>In case we are unable to resolve the matter, we request you to contact Financial Services Complaints Limited (FSCL)—an independent, not-for-profit dispute resolution scheme approved by the Minister of Consumer Affairs. FSCL’s service is completely free and designed to help resolve complaints fairly:</p>
+    <p>You can contact FSCL</p>
+    <p>Website: www.fscl.org.nz</p>
+	<p>Email: complaints@fscl.org.nz</p>
+    <p>Phone: 0800 347 257</p>
+	<p>Write to: FSCL, PO Box 5967, Wellington 6011</p>
+
+    <h2>4. Our Commitment</h2>
+    <p>We are committed to providing a fair and transparent complaints process, ensuring all concerns are addressed professionally and efficiently.</p>
+</div>
+
+<!-- Contacts section-->
+<!-- <div class="contacts-section" id="contacts"> -->
+    <!-- <div class="container"> -->
+        <!-- <section class="contact-card"> -->
+            <!-- <header class="contact-card__header"> -->
+                <!-- <h2>Contact Information</h2> -->
+                <!-- <h4>Mauris leo nisl, malesuada id faucibus non, gravida sit amet lectus</h4> -->
+            <!-- </header> -->
+            <!-- <div class="contact-info"> -->
+                <!-- <div class="contact-info__logo">REM</div> -->
+                <!-- <div class="contact-info__group"> -->
+                    <!-- <div class="contact-info__additional"> -->
+                        <!-- <p>Donec lorem ante, efficitur?</p> -->
+                        <!-- <p>Sed aliquet sagittis odio commodo facilisis?</p> -->
+                        <!-- <p>Vivamus vel lacus tellus?</p> -->
+                    <!-- </div> -->
+                    <!-- <div class="contact-info__vcard vcard"> -->
+                        <!-- <h4 class="fn org">Marketing Agency</h4> -->
+                        <!-- <p class="role title">Lorem ipsum dolor sit amet</p> -->
+                        <!-- <p class="icon icon_location"><a class="adr js-anchor" href="#gmap"><span class="country-name">CountryName</span>,&nbsp;<span class="locality">CityName</span>,&nbsp;<span class="address">Address</span></a></p> -->
+                        <!-- <p class="icon icon_mail"><a class="email" href="mailto:contact@example.com">contact@example.com</a></p> -->
+                        <!-- <p class="icon icon_phone"><a class="tel" href="tel:1111111111">111-111-11-11</a></p> -->
+                    <!-- </div> -->
+                    <!-- <ul class="contact-info__social"> -->
+                        <!-- <li><a class="icon icon_fb" rel="nofollow">I'm on Facebook</a></li> -->
+                        <!-- <li><a class="icon icon_twi" rel="nofollow">My Twitter</a></li> -->
+                        <!-- <li><a class="icon icon_gplus" rel="nofollow">I'm on Google+</a></li> -->
+                        <!-- <li><a class="icon icon_vk" rel="nofollow">I'm in Vk</a></li> -->
+                        <!-- <li><a class="icon icon_in" rel="nofollow">My Linkedin profile</a></li> -->
+                        <!-- <li><a class="icon icon_rss" rel="nofollow">RSS feed... maybe</a></li> -->
+                    <!-- </ul> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </section> -->
+    <!-- </div> -->
+    <!-- <div class="gmap" id="gmap"></div> -->
+<!-- </div> -->
+
+<!-- Footer-->
+<footer class="main-footer">
+    <div class="container">
+        <p class="main-footer__copyright">&copy;&nbsp;<span>REM 2026. All rights reserved.</span></p>
+        <a class="main-footer__gotop icon icon_gotop js-anchor" href="#home">To top!</a>
+        <p class="main-footer__links">Designed by&nbsp;<a>REM</a></p>
+    </div>
+</footer>
+
+<script src="static/js/body.min.js"></script>
+
+<script>
+// 导航滚动逻辑（简化，强制白底）
+let lastScrollTop = 0;
+const header = document.querySelector('.main-header');
+const scrollThreshold = 200;
+
+window.addEventListener('scroll', function() {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // 强制保持白底，不切换透明
+    header.classList.add('scrolled');
+
+    // 下滑隐藏/上滑显示导航
+    if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = currentScrollTop;
+});
+</script>
+
+</body>
+</html>
