@@ -12,7 +12,7 @@
 
 /* 全局重置 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, h7, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -137,7 +137,7 @@ body {
 }
 
 /* 标题 & 文字 */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h7 {
   font-weight: 400;
 }
 
@@ -161,6 +161,15 @@ h4 {
 
 h5 {
   font-size: 18px;
+}
+h7 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 25px;
+  margin:0 auto;
+  max-width:600px;
+  color:#fff;
+  display: block; /* 加这一行！ */
+  text-align: center; /* 可选，让文字居中更好看 */
 }
 
 p {
@@ -437,11 +446,14 @@ a:hover {
 
 .home-section__header h1 {
   margin-bottom: 10px;
-  font-size: 100px;
+  font-size: 60px;
   font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
   font-weight: 700;
   color: #fff;
   text-shadow: 1px 1px 1px #111;
+  max-width:600px;
+  margin:auto;
+  margin-bottom:40px;
 }
 
 .home-section__header h2 {
