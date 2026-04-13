@@ -164,7 +164,7 @@ h5 {
 }
 h7 {
   font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 25px;
+  font-size: 20px;
   margin:0 auto;
   max-width:600px;
   color:#fff;
@@ -201,16 +201,61 @@ a:hover {
   font-weight: 400;
 }
 
+
+
 .icon_menu:before { content: "\e801" }
 .icon_menu.is-closed:before { content: "\e809" }
 .icon_spoiler.is-opened:before { content: "\e803" }
 .icon_spoiler.is-closed:before { content: "\e802" }
-.icon_research:before { content: "\e80b" }
-.icon_strategy:before { content: "\e807" }
-.icon_improve:before { content: "\e80f" }
-.icon_plan:before { content: "\e80c" }
-.icon_recover:before { content: "\e80a" }
-.icon_support:before { content: "\e80e" }
+
+.icon_research:before { content: ""; /* 必须清空原有字符 */
+  width: 60px;  /* 按你的图标尺寸调整 */
+  height: 60px;
+  background: url(../images/s1.png) no-repeat center center;
+  background-size: contain; /* 自适应缩放 */
+  margin-right: 15px; /* 图标和文字的间距，按需调整 */
+  vertical-align: middle; /* 垂直居中对齐文字 */
+}
+.icon_strategy:before { content: "" ;
+  width: 60px;  /* 按你的图标尺寸调整 */
+  height: 60px;
+  background: url(../images/s2.png) no-repeat center center;
+  background-size: contain; /* 自适应缩放 */
+  margin-right: 15px; /* 图标和文字的间距，按需调整 */
+  vertical-align: middle; /* 垂直居中对齐文字 */
+}
+.icon_improve:before { content: ""; 
+  width: 60px;  /* 按你的图标尺寸调整 */
+  height: 60px;
+  background: url(../images/s5.png) no-repeat center center;
+  background-size: contain; /* 自适应缩放 */
+  margin-right: 15px; /* 图标和文字的间距，按需调整 */
+  vertical-align: middle; /* 垂直居中对齐文字 */
+}
+.icon_plan:before { content: "" ;
+  width: 60px;  /* 按你的图标尺寸调整 */
+  height: 60px;
+  background: url(../images/s4.png) no-repeat center center;
+  background-size: contain; /* 自适应缩放 */
+  margin-right: 15px; /* 图标和文字的间距，按需调整 */
+  vertical-align: middle; /* 垂直居中对齐文字 */
+}
+.icon_recover:before { content: "" ;
+  width: 60px;  /* 按你的图标尺寸调整 */
+  height: 60px;
+  background: url(../images/s3.png) no-repeat center center;
+  background-size: contain; /* 自适应缩放 */
+  margin-right: 15px; /* 图标和文字的间距，按需调整 */
+  vertical-align: middle; /* 垂直居中对齐文字 */
+}
+.icon_support:before { content: "";
+  width: 60px;  /* 按你的图标尺寸调整 */
+  height: 60px;
+  background: url(../images/s6.png) no-repeat center center;
+  background-size: contain; /* 自适应缩放 */
+  margin-right: 15px; /* 图标和文字的间距，按需调整 */
+  vertical-align: middle; /* 垂直居中对齐文字 */
+}
 .icon_develop:before { content: "\e808" }
 .icon_deploy:before { content: "\e80d" }
 .icon_deliver:before { content: "\e810" }
@@ -446,12 +491,12 @@ a:hover {
 
 .home-section__header h1 {
   margin-bottom: 10px;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
   font-weight: 700;
   color: #fff;
   text-shadow: 1px 1px 1px #111;
-  max-width:600px;
+  max-width:700px;
   margin:auto;
   margin-bottom:40px;
 }
@@ -945,7 +990,7 @@ a:hover {
 }
 
 .contact-info__additional {
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .contact-info__additional p {
@@ -1272,4 +1317,15 @@ a:hover {
         position: relative !important;
         z-index: 2 !important;
     }
+}
+.feedback-link {
+  color: #2c3e50; /* 匹配当前文字颜色 */
+  text-decoration: none; /* 去除默认下划线 */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.feedback-link:hover {
+  color: #e73a3e; /* 悬停时变成 REM 品牌红色 */
+  text-decoration: underline; /* 可选：悬停时加下划线增强提示 */
 }
