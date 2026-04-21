@@ -1332,10 +1332,10 @@ a:hover {
 /* ========== 团队成员折叠展开效果（仅新增，不修改原有样式） ========== */
 /* 折叠容器核心样式 - 控制默认显示高度+渐变遮罩 */
 .team__member-bio {
-  max-height: 90px; /* 默认显示约4行文字，可根据需要调整 */
+  max-height: 100px; /* 默认显示约4行文字，可根据需要调整 */
   overflow: hidden;
   position: relative;
-  transition: max-height 0.3s ease; /* 展开/折叠动画，丝滑不突兀 */
+  transition: max-height 0.5s ease; /* 展开/折叠动画，丝滑不突兀 */
 }
 
 /* 折叠状态下的渐变遮罩（暗示内容未显示完全） */
