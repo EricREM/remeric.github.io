@@ -1329,3 +1329,43 @@ a:hover {
   color: #e73a3e; /* 悬停时变成 REM 品牌红色 */
   text-decoration: underline; /* 可选：悬停时加下划线增强提示 */
 }
+/* ========== 团队成员折叠展开效果（仅新增，不修改原有样式） ========== */
+/* 折叠容器核心样式 - 控制默认显示高度+渐变遮罩 */
+.team__member-bio {
+  max-height: 90px; /* 默认显示约4行文字，可根据需要调整 */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease; /* 展开/折叠动画，丝滑不突兀 */
+}
+
+/* 折叠状态下的渐变遮罩（暗示内容未显示完全） */
+.team__member-bio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px; /* 渐变遮罩高度，覆盖最后1-2行文字 */
+  /* 从透明到白色渐变，和卡片背景融合，提示“还有内容” */
+  background: linear-gradient(to bottom, transparent, #ffffff);
+  pointer-events: none; /* 不影响鼠标hover交互 */
+  transition: opacity 0.3s ease;
+}
+
+/* 鼠标悬停在卡片上时：展开全部文字 + 隐藏渐变遮罩 */
+.team__member:hover .team__member-bio {
+  max-height: 300px; /* 足够容纳所有团队成员简介 */
+}
+.team__member:hover .team__member-bio::after {
+  opacity: 0; /* 展开后遮罩消失，提示内容已完整 */
+}
+
+/* 移动端适配（和你现有移动端规则一致） */
+@media screen and (max-width: 768px) {
+  .team__member-bio {
+    max-height: none; /* 移动端直接显示全部内容，无需折叠 */
+  }
+  .team__member-bio::after {
+    display: none; /* 移动端隐藏遮罩 */
+  }
+}
