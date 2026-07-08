@@ -76,8 +76,9 @@ body {
 
 .container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
+  width: calc(100% - 180px);
 }
 
 .container:before, .container:after {
@@ -224,7 +225,7 @@ a:hover {
   margin-right: 15px; /* 图标和文字的间距，按需调整 */
   vertical-align: middle; /* 垂直居中对齐文字 */
 }
-.icon_improve:before { content: ""; 
+.icon_improve:before { content: "";
   width: 60px;  /* 按你的图标尺寸调整 */
   height: 60px;
   background: url(../images/s5.png) no-repeat center center;
@@ -341,9 +342,9 @@ a:hover {
   justify-content: space-between !important;
   height: 100% !important;
   width: 100% !important;
-  max-width: 2100px !important;
+  max-width: 2400px !important;
   margin: 0 auto !important;
-  padding: 0 80px !important;
+  padding: 0 50px !important;
   background: transparent !important;
 }
 
@@ -1155,7 +1156,12 @@ a:hover {
   .second-nav .container {
     padding: 0 20px !important;
     max-width: 100% !important;
-	justify-content: flex-start !important; /* 手机端靠左 */
+    justify-content: flex-start !important; /* 手机端靠左 */
+  }
+  /* 全局页面容器 移动端缩小左右留白 */
+  .container {
+    width: calc(100% - 20px) !important; /* 左右各15px留白，可自行改数值 */
+    max-width: 100% !important;
   }
   .logo-img {
     height: 35px !important;
