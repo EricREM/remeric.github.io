@@ -1162,17 +1162,6 @@ a:hover {
   .container {
     width: calc(100% - 10px) !important; /* 左右各15px留白，可自行改数值 */
     max-width: 100% !important;
-  }
-  .team__member {
-  width: calc(100% - 40px) !important;
-  margin: 0 20px 60px !important; /* 底部间距从30px改成60px，拉开和下方contact距离 */
-  display: block !important;
-}
-  .contacts-section {
-  position: relative !important;
-  padding-top: 300px !important;
-  margin-top: 120px !important; /* 从50px改成120px，大幅增加团队和联系板块之间空白 */
-}
   .logo-img {
     height: 35px !important;
   }
@@ -1285,10 +1274,8 @@ a:hover {
   position: relative !important;
   height: 700px !important;
 }
+    
 }
-
-
-
 @media screen and (max-width: 480px) {
   .projects__item {
     width: 100% !important;
