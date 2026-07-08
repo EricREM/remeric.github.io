@@ -1160,7 +1160,7 @@ a:hover {
   }
   /* 全局页面容器 移动端缩小左右留白 */
   .container {
-    width: calc(100% - 20px) !important; /* 左右各15px留白，可自行改数值 */
+    width: calc(100% - 10px) !important; /* 左右各15px留白，可自行改数值 */
     max-width: 100% !important;
   }
   .logo-img {
