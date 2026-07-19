@@ -14,6 +14,26 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="static/css/screen.min.css">
     <link rel="stylesheet" href="static/css/custom.min.css">
+    <style>
+        /* Mobile safeguard: Contact must follow, never overlap, the Team section. */
+        @media screen and (max-width: 768px) {
+            #team { padding-bottom: 80px !important; }
+            .contacts-section {
+                position: static !important;
+                clear: both !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            .contacts-section .contact-card {
+                position: static !important;
+                top: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+                z-index: auto !important;
+                margin: 0 20px 30px !important;
+            }
+        }
+    </style>
     <script src="static/js/head.min.js"></script>
 </head>
 <body>
