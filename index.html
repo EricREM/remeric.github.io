@@ -283,67 +283,109 @@
     <!-- </div> -->
 <!-- </section> -->
 
-<!-- Team section-->
 <section class="common-section" id="team">
     <div class="container">
         <header class="common-section__header">
             <h2>Meet your Team</h2>
             <p>All our REM advisers are seasoned finance professionals</p>
         </header>
-			<div class="team">
-  <!-- Rohit 卡片示例 -->
-  <div class="team__member">
-    <img src="static/images/team/1.jpg" alt="Rohit Mulki">
-    <div class="team__member-info">
-      <span class="team__member-name">Rohit Mulki</span>
-      <span class="team__member-role">REM Founder, Senior Mortgage Adviser</span>
-      <!-- 核心修改：用team__member-bio包裹简介文字 -->
-      <div class="team__member-bio">
-        Rohit brings 30+ years of expertise in retail, business and commercial lending to REM Finance. Having recently stepped away as ANZ Bank’s Auckland Regional Manager, he leverages deep local market knowledge to deliver tailored mortgage solutions for Kiwi clients. His career focus on ethical, solution-driven lending makes him a trusted advisor for all your home loan needs.
-      </div>
-    </div>
-  </div>
-  <div class="team__member">
-    <img src="static/images/team/teameric.png" alt="Eric Liu">
-    <div class="team__member-info">
-      <span class="team__member-name">Eric Liu</span>
-      <span class="team__member-role"></span>
-      <!-- 核心修改：用team__member-bio包裹简介文字 -->
-      <div class="team__member-bio">
-          Our next team member is on the way.
-          Together, we'll continue supporting more Kiwis to reach every milestone.
-      </div>
-    </div>
-  </div>  
-	<div class="team__member">
-      <img src="static/images/team/2.png" alt="New Member">
-      <div class="team__member-info">
-        <span class="team__member-name">Joining Soon...</span>
-        <span class="team__member-role"></span>
-        <!-- 核心修改：用team__member-bio包裹简介文字 -->
-        <div class="team__member-bio">
-            Our next team member is on the way.
-            Together, we'll continue supporting more Kiwis to reach every milestone.
-        </div>
-      </div>
-    </div>
-	<div class="team__member">
-      <img src="static/images/team/2.png" alt="New Member">
-      <div class="team__member-info">
-        <span class="team__member-name">Joining Soon...</span>
-        <span class="team__member-role"></span>
-        <!-- 核心修改：用team__member-bio包裹简介文字 -->
-        <div class="team__member-bio">
-            Our next team member is on the way.
-            Together, we'll continue supporting more Kiwis to reach every milestone.
-        </div>
-      </div>
-    </div>
+        <!-- 唯一全局Grid容器，全部卡片+对应详情平铺在内 -->
+        <div class="team-grid">
+            <!-- 1. Rohit Mulki -->
+            <div class="team-card" data-id="rohit">
+                <div class="avatar">
+                    <img src="static/images/team/1.jpg" alt="Rohit Mulki">
+                </div>
+                <h3 class="name">Rohit Mulki</h3>
+                <p class="role">REM Founder｜Senior Mortgage Adviser</p>
+                <span class="toggle-btn"><span class="toggle-label">View profile</span><span class="toggle-icon" aria-hidden="true">↓</span></span>
+            </div>
+            <!-- Rohit专属详情面板，紧跟卡片 -->
+            <div class="team-detail" data-for="rohit">
+                <h2 class="detail-name">Rohit Mulki</h2>
+                <div class="detail-role">REM Founder｜Senior Mortgage Adviser</div>
+                <p class="detail-text">
+                    Rohit brings 30+ years of expertise in retail, business and commercial lending to REM Finance. Having recently stepped away as ANZ Bank’s Auckland Regional Manager, he leverages deep local market knowledge to deliver tailored mortgage solutions for Kiwi clients. His career focus on ethical, solution-driven lending makes him a trusted advisor for all your home loan needs.
+                </p>
+                <div class="contact">
+                    <a class="contact-link" href="tel:+64274526390"><span>P</span> 027 452 6390</a>
+                    <a class="contact-link" href="mailto:rohit.mulki@remfinance.co.nz"><span>E</span> Rohit.Mulki@remfinance.co.nz</a>
+                </div>
+                <!-- <div class="btns">
+                    <button class="detail-btn"><span class="dot">→</span> View My Page</button>
+                    <button class="detail-btn"><span class="dot">→</span> Apply Now</button>
+                </div> -->
+            </div>
+
+            <!-- 2. Eric Liu -->
+            <div class="team-card" data-id="eric">
+                <div class="avatar">
+                    <img src="static/images/team/teameric.png" alt="Eric Liu">
+                </div>
+                <h3 class="name">Eric Liu</h3>
+                <p class="role"></p>
+                <span class="toggle-btn"><span class="toggle-label">View profile</span><span class="toggle-icon" aria-hidden="true">↓</span></span>
+            </div>
+            <!-- Eric专属详情 -->
+            <div class="team-detail" data-for="eric">
+                <h2 class="detail-name">Eric Liu</h2>
+                <div class="detail-role"></div>
+                <p class="detail-text">
+                    Our next team member is on the way.
+                    Together, we'll continue supporting more Kiwis to reach every milestone.
+                </p>
+                <div class="contact">
+                    <a class="contact-link" href="tel:+64275545535"><span>P</span> 027 5545 535</a>
+                    <a class="contact-link" href="mailto:eric.liu@remfinance.co.nz"><span>E</span> Eric.Liu@remfinance.co.nz</a>
+                </div>
+                <!-- <div class="btns">
+                    <button class="detail-btn"><span class="dot">→</span> View My Page</button>
+                    <button class="detail-btn"><span class="dot">→</span> Apply Now</button>
+                </div> -->
+            </div>
+
+            <!-- 3. Joining Soon 1 -->
+            <div class="team-card" data-id="soon1">
+                <div class="avatar">
+                    <img src="static/images/team/2.png" alt="New Member">
+                </div>
+                <h3 class="name">Joining Soon...</h3>
+                <p class="role"></p>
+                <span class="toggle-btn"><span class="toggle-label">View profile</span><span class="toggle-icon" aria-hidden="true">↓</span></span>
+            </div>
+            <!-- Soon1专属详情 -->
+            <div class="team-detail" data-for="soon1">
+                <h2 class="detail-name">Joining Soon...</h2>
+                <div class="detail-role"></div>
+                <p class="detail-text">
+                    Our next team member is on the way.
+                    Together, we'll continue supporting more Kiwis to reach every milestone.
+                </p>
+
+            </div>
+
+            <!-- 4. Joining Soon 2 -->
+            <div class="team-card" data-id="soon2">
+                <div class="avatar">
+                    <img src="static/images/team/2.png" alt="New Member">
+                </div>
+                <h3 class="name">Joining Soon...</h3>
+                <p class="role"></p>
+                <span class="toggle-btn"><span class="toggle-label">View profile</span><span class="toggle-icon" aria-hidden="true">↓</span></span>
+            </div>
+            <!-- Soon2专属详情 -->
+            <div class="team-detail" data-for="soon2">
+                <h2 class="detail-name">Joining Soon...</h2>
+                <div class="detail-role"></div>
+                <p class="detail-text">
+                    Our next team member is on the way.
+                    Together, we'll continue supporting more Kiwis to reach every milestone.
+                </p>
+
+            </div>
         </div>
     </div>
 </section>
-
-<!-- Contacts section-->
 <div class="contacts-section" id="contacts">
     <div class="container">
         <section class="contact-card">
@@ -395,6 +437,21 @@
 
 <script src="static/js/body.min.js"></script>
 <script>
+// 导航锚点定位：修改这个数字可调整导航点击后的上下位置（单位：px）。
+const anchorOffset = 0;
+
+$(function() {
+    // Replace the compressed theme handler with this editable version.
+    $('.js-anchor').off('click').on('click', function(event) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+
+        event.preventDefault();
+        const destination = target.getBoundingClientRect().top + window.pageYOffset - anchorOffset;
+        $('html, body').stop(true).animate({ scrollTop: destination }, 1200);
+    });
+});
+
 // 最终版：导航栏滚动样式 + 显示隐藏（完美适配桌面/移动端）
 let lastScrollTop = 0;
 const header = document.querySelector('.main-header');
@@ -421,6 +478,58 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = currentScrollTop;
 });
+    const teamGrid = document.querySelector('.team-grid');
+    const allCards = document.querySelectorAll('.team-card');
+    const allDetails = document.querySelectorAll('.team-detail');
+
+    // Keep the four cards in one row.  Details are placed after them so an
+    // expanded panel can be inserted directly below the selected card's row.
+    allDetails.forEach(detail => teamGrid.appendChild(detail));
+
+    function placeDetailBelowCardRow(card, detail) {
+        const cardTop = card.getBoundingClientRect().top;
+        const cardsInSameRow = Array.from(allCards).filter(candidate =>
+            Math.abs(candidate.getBoundingClientRect().top - cardTop) < 2
+        );
+        const lastCardInRow = cardsInSameRow[cardsInSameRow.length - 1];
+
+        teamGrid.insertBefore(detail, lastCardInRow.nextElementSibling);
+    }
+
+    allCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const targetId = card.dataset.id;
+            // 找到当前卡片配套的详情面板
+            const targetDetail = document.querySelector(`.team-detail[data-for="${targetId}"]`);
+            const toggleButton = card.querySelector('.toggle-btn');
+            const isAlreadyOpen = targetDetail.classList.contains('active');
+
+            // 1. 全部重置：所有详情隐藏，所有箭头改为向下
+            allDetails.forEach(detail => detail.classList.remove('active'));
+            document.querySelectorAll('.toggle-btn').forEach(toggle => toggle.classList.remove('is-open'));
+
+            // 2. 点击已展开的卡片时收起；否则展开当前卡片。
+            if (!isAlreadyOpen) {
+                // Put the panel after the final card in this responsive row.
+                placeDetailBelowCardRow(card, targetDetail);
+                // 展开当前卡片详情，箭头改为向上
+                targetDetail.classList.add('active');
+                toggleButton.classList.add('is-open');
+            }
+        })
+    })
+
+    // If the viewport changes (4 → 3 → 2 → 1 columns), keep the open panel
+    // immediately below the row containing its card.
+    window.addEventListener('resize', () => {
+        const activeDetail = document.querySelector('.team-detail.active');
+        if (!activeDetail) return;
+
+        const activeCard = document.querySelector(
+            `.team-card[data-id="${activeDetail.dataset.for}"]`
+        );
+        placeDetailBelowCardRow(activeCard, activeDetail);
+    });
 </script>
 
 </body>
