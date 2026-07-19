@@ -938,7 +938,259 @@ a:hover {
   font-size: 18px;
   text-transform: capitalize;
 }
+/* ========== 全新团队卡片+点击展开面板样式（兼容你现有主题色 #F03838） ========== */
+/* 全局网格容器，自动自适应换行 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    width: 100%;
+}
+/* 头像卡片基础样式 */
+.team-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+.avatar {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px 12px 90px 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 26px;
+    color: #990055;
+    font-weight: bold;
+    margin: 0;
+}
+.role {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 24px;
+}
+.toggle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f12b6e;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
 
+/* 详情面板关键代码：强制占满网格全部列 */
+.team-detail {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 12px;
+    padding: 40px;
+    background: #f9f7f9;
+    border-radius: 30px 0 30px 0;
+    display: none;
+}
+.team-detail.active {
+    display: block;
+}
+
+/* 详情内部文字按钮样式 */
+.detail-name {
+    font-size: 34px;
+    color: #990055;
+    margin: 0 0 8px;
+}
+.detail-role {
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 20px;
+}
+.detail-text {
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.contact span {
+    color: #990055;
+    font-weight: bold;
+}
+.btns {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+.detail-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 16px;
+}
+.dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #f12b6e;
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+/* Team palette: site navy + coral red. */
+#team .name,
+#team .detail-name {
+    color: #2c3e50;
+}
+#team .team-detail {
+    background: #f5f7f7;
+    border-top: 4px solid #e05252;
+}
+#team .toggle-btn {
+    align-self: flex-start;
+    width: auto;
+    min-width: 132px;
+    height: 42px;
+    padding: 0 13px 0 15px;
+    border: 1.5px solid #e05252;
+    border-radius: 999px;
+    background: #fff;
+    color: #2c3e50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    box-shadow: none;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+#team .toggle-btn:hover {
+    border-color: #c94040;
+    background: #fff5f4;
+    transform: translateY(-2px);
+}
+#team .toggle-icon {
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: #e05252;
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+#team .toggle-btn.is-open {
+    border-color: #e05252;
+    background: #e05252;
+    color: #fff;
+}
+#team .toggle-btn.is-open .toggle-icon {
+    background: transparent;
+    color: #fff;
+    transform: rotate(180deg);
+}
+#team .contact span {
+    color: #e05252;
+}
+#team .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#team .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid #d9e1e3;
+    border-radius: 999px;
+    background: #fff;
+    color: #2c3e50;
+    font-size: 15px;
+    font-weight: 600;
+    transition: border-color .2s ease, background-color .2s ease, color .2s ease, transform .2s ease;
+}
+#team .contact-link:hover {
+    border-color: #e05252;
+    background: #fff5f4;
+    color: #c94040;
+    transform: translateY(-1px);
+}
+#team .detail-btn {
+    padding: 12px 20px;
+    border: 1px solid #2c3e50;
+    background: #2c3e50;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+#team .detail-btn:hover {
+    background: #1f303f;
+    border-color: #1f303f;
+    transform: translateY(-2px);
+}
+#team .detail-btn .dot {
+    background: #e05252;
+}
+/* The second action is visually quieter, while a single action remains primary. */
+#team .detail-btn + .detail-btn {
+    border-color: #2c3e50;
+    background: #fff;
+    color: #2c3e50;
+}
+#team .detail-btn + .detail-btn:hover {
+    background: #edf2f4;
+    border-color: #2c3e50;
+}
+#team .detail-btn + .detail-btn .dot {
+    background: #e05252;
+    color: #fff;
+}
+
+/* 平板自适应 2列 */
+@media screen and (max-width: 1199px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* 较窄桌面自适应 3列 */
+@media screen and (max-width: 899px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* 手机自适应 单列 */
+@media screen and (max-width: 599px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-detail {
+        padding: 24px 20px;
+    }
+    .btns {
+        flex-direction: column;
+    }
+}
+
+/* 手机端：让成员卡片和展开内容保留舒适的左右留白。 */
+@media screen and (max-width: 768px) {
+    #team .team-grid {
+        padding-inline: 16px;
+    }
+}
 /* ======================================================
    联系我们
    ====================================================== */
@@ -1334,36 +1586,6 @@ a:hover {
 .feedback-link:hover {
   color: #e73a3e; /* 悬停时变成 REM 品牌红色 */
   text-decoration: underline; /* 可选：悬停时加下划线增强提示 */
-}
-/* ========== 团队成员折叠展开效果（仅新增，不修改原有样式） ========== */
-/* 折叠容器核心样式 - 控制默认显示高度+渐变遮罩 */
-.team__member-bio {
-  max-height: 100px; /* 默认显示约4行文字，可根据需要调整 */
-  overflow: hidden;
-  position: relative;
-  transition: max-height 0.5s ease; /* 展开/折叠动画，丝滑不突兀 */
-}
-
-/* 折叠状态下的渐变遮罩（暗示内容未显示完全） */
-.team__member-bio::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30px; /* 渐变遮罩高度，覆盖最后1-2行文字 */
-  /* 从透明到白色渐变，和卡片背景融合，提示“还有内容” */
-  background: linear-gradient(to bottom, transparent, #ffffff);
-  pointer-events: none; /* 不影响鼠标hover交互 */
-  transition: opacity 0.3s ease;
-}
-
-/* 鼠标悬停在卡片上时：展开全部文字 + 隐藏渐变遮罩 */
-.team__member:hover .team__member-bio {
-  max-height: 300px; /* 足够容纳所有团队成员简介 */
-}
-.team__member:hover .team__member-bio::after {
-  opacity: 0; /* 展开后遮罩消失，提示内容已完整 */
 }
 
 /* 移动端适配（和你现有移动端规则一致） */
