@@ -1596,4 +1596,18 @@ a:hover {
   .team__member-bio::after {
     display: none; /* 移动端隐藏遮罩 */
   }
+
+  /* Keep the Contact card below the final team member instead of overlapping it. */
+  .contacts-section {
+    margin-top: 0 !important;
+    padding-top: 30px !important;
+  }
+  .contact-card {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: auto !important;
+    margin: 0 20px 30px !important;
+  }
 }
